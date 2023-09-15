@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WpfApp1;
 
-namespace WpfApp1
+namespace _09._13_
 {
     internal class Operator
     {
@@ -23,6 +22,6 @@ namespace WpfApp1
         public int Operandus2 { get => operandus2; set => operandus2 = value; }
         public string Opertaor { get => opertaor; set => opertaor = value; }
 
-
+        
     }
 }

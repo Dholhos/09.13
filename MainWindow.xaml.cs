@@ -15,7 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp1
+namespace _09._13_
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -24,12 +24,10 @@ namespace WpfApp1
     {
         static List<Operator> operatorok;
 
-        
         public MainWindow()
         {
             InitializeComponent();
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -38,10 +36,10 @@ namespace WpfApp1
                 //lblEditor.Content = File.ReadAllText(openFileDialog.FileName);
                 FileBeolvas(openFileDialog.FileName);
                 lblDarab.Content = operatorok.Count();
-                
-            }           
+
+            }
         }
-        public void FileBeolvas(string filename) 
+        public void FileBeolvas(string filename)
         {
             operatorok = new List<Operator>();
             foreach (var sorok in File.ReadAllLines(filename))
@@ -60,9 +58,9 @@ namespace WpfApp1
 
         private void btDontes_Click(object sender, RoutedEventArgs e)
         {
-            if (operatorok.Any(x=> x.Operandus1 % 10 == 0))
+            if (operatorok.Any(x => x.Operandus1 % 10 == 0))
             {
-                if (operatorok.Any(x=> x.Operandus2 % 10 == 0))
+                if (operatorok.Any(x => x.Operandus2 % 10 == 0))
                 {
                     lblVanE.Content = "Van ilyen kifejezés!";
                 }
@@ -80,10 +78,8 @@ namespace WpfApp1
             lbiHarom.Content = "div -> " + operatorok.Count(x => x.Opertaor == "div") + "db";
             lbiNegy.Content = "- -> " + operatorok.Count(x => x.Opertaor == "-") + "db";
             lbiOt.Content = "* -> " + operatorok.Count(x => x.Opertaor == "*") + "db";
-            lbiHaz.Content = "+ -> " + operatorok.Count(x => x.Opertaor == "+") + "db";
+            lbiHat.Content = "+ -> " + operatorok.Count(x => x.Opertaor == "+") + "db";
 
         }
-
-
     }
 }
